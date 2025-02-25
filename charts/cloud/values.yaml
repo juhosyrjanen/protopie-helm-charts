@@ -75,6 +75,8 @@ cloud:
     replicas: 1
   volumes:
     upload: 50Gi
+    # Default accessMode is ReadWriteMany
+    accessMode: ""
   config:
     yml: "you can set content by --set-file cloud.config.yml=config.yml"
   license:
