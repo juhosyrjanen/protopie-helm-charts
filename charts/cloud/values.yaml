@@ -27,9 +27,14 @@ image:
       tag: api-1.0.1
 
 ingress:
+  # If you want to use a specific ingress class, set the value here.
+  ingressClassName: ""
   enabled: false
   host: ""
   annotations: {}
+  # To enable certificate, set the value to true.
+  tls:
+    enabled: false
 
 # eg) for private docker image registry (imagePullSecrets)
 # imageCredentials:
