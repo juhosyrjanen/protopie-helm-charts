@@ -80,6 +80,8 @@ cloud:
     replicas: 1
   volumes:
     upload: 50Gi
+    # If left empty, the default storage class will be used
+    storageClassName: ""
     # Default accessMode is ReadWriteMany
     accessMode: ""
   config:
@@ -98,6 +100,8 @@ nginx:
 
 db:
   volume: 20Gi
+  # If left empty, the default storage class will be used
+  storageClassName: ""
   env:
     DB_HOST: db
     DB_PORT: 5432
