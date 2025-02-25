@@ -60,5 +60,5 @@ spec:
         requests:
           storage: {{ .Values.db.volume }}
       {{- if .Values.db.storageClassName }}
-      storageClass: {{ .Values.db.storageClassName }}
+      storageClassName: {{ .Values.db.storageClassName }}
       {{- end }}
