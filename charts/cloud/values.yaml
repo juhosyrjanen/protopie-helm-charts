@@ -76,7 +76,7 @@ cloud:
   volumes:
     upload: 50Gi
     # If left empty, the default storage class will be used
-    storageClass: ""
+  storageClass: ""
   config:
     yml: "you can set content by --set-file cloud.config.yml=config.yml"
   license:
