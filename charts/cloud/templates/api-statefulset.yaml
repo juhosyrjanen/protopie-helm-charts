@@ -127,3 +127,6 @@ spec:
   resources:
     requests:
       storage: {{ .Values.cloud.volumes.upload }}
+  {{- if .Values.cloud.storageClass }}
+  storageClassName: {{ .Values.cloud.storageClass }}
+  {{- end }}
