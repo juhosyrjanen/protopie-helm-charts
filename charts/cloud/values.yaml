@@ -27,9 +27,14 @@ image:
       tag: api-1.0.1
 
 ingress:
+  # If you want to use a specific ingress class, set the value here.
+  ingressClassName: ""
   enabled: false
   host: ""
   annotations: {}
+  # To enable certificate, set the value to true.
+  tls:
+    enabled: false
 
 # eg) for private docker image registry (imagePullSecrets)
 # imageCredentials:
@@ -74,6 +79,8 @@ cloud:
   web:
     replicas: 1
   volumes:
+    # If left empty, the default storage class will be used
+    storageClassName: ""
     # Default accessMode is ReadWriteMany
     accessMode: ""
     usePVC: true
@@ -97,6 +104,8 @@ nginx:
 
 db:
   volume: 20Gi
+  # If left empty, the default storage class will be used
+  storageClassName: ""
   env:
     DB_HOST: db
     DB_PORT: 5432
